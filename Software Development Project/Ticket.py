@@ -1,30 +1,14 @@
 # Initiate_Project.py
 #
 # author: Kaoru
-# date: 05.09.23
-'''
-class Ticket:
-    ticket_count = 2001
-    all_tickets = []
+# date: 06.09.23
 
-def __init__(self, ticket_number, staff_id, creator_name, email_address, issue_description):
-    self.ticket_number = Ticket.ticket_count
-    Ticket.ticket_count += 1
-    self.staff_id = staff_id
-    self.creator_name = creator_name
-    self.email_address = email_address
-    self.issue_description = issue_description
-    self.response = "Not Yet Provided."
-    self.status = "Open"
-
-def submit_ticket(self):
-    input()
-'''
+# modify in conjunction with Main.py
 class Ticket:
     ticket_counter = 2001 # to start thicket number from 2001
     all_tickets = []
 
-    def __init__(self, ticket_number, staff_id, creator_name, contact_email, description):
+    def __init__(self, staff_id, creator_name, contact_email, description):
         self.ticket_number = Ticket.ticket_counter
         Ticket.ticket_counter += 1
         self.staff_id = staff_id
@@ -35,14 +19,22 @@ class Ticket:
         self.status = "Open"
         Ticket.all_tickets.append(self)
 
-    def submit_ticket(self):
-        print(f"Ticket Submitted Successfully! Ticket Number: {self.ticket_number}")
 
     def resolve_password_change(self):
-        if "Password Change" in self.description:
             new_password = self.staff_id[:2] + self.creator_name[:3]
-            self.response = f"New Password: {new_password}"
-        self.status = "Closed"
+            self.response = f"New Password Generated: {new_password}"
+            self.status = "Closed"
+
+    def show_all_tickets(self):
+        print("All Tickets:")
+        print(f"Ticket Number: {self.ticket_number}")
+        print(f"Ticket Creator Name: {self.creator_name}")
+        print(f"Staff ID: {self.staff_id}")
+        print(f"Contact Email: {self.contact_email}")
+        print(f"Description: {self.description}")
+        print(f"Response: {self.response}")
+        print(f"Status: {self.status}\n")
+
 
     def resolve_ticket(self, response):
         self.response = response
@@ -51,15 +43,6 @@ class Ticket:
     def reopen_ticket(self):
         self.status = "Reopened"
 
-    def print_ticket_info(self):
-        print("Ticket Information:")
-        print(f"Ticket Number: {self.ticket_number}")
-        print(f"Ticket Creator Name: {self.creator_name}")
-        print(f"Staff ID: {self.staff_id}")
-        print(f"Contact Email: {self.contact_email}")
-        print(f"Description: {self.description}")
-        print(f"Response: {self.response}")
-        print(f"Status: {self.status}\n")
 
     @staticmethod
     def ticket_stats():
