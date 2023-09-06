@@ -53,4 +53,4 @@ my_car.seat()
 
 my_mc.jacket()
 
-my_mc.seat() # assertion output error - Motorcycle object does not have attribute 'seat'
+#my_mc.seat() # assertion output error - Motorcycle object does not have attribute 'seat'
