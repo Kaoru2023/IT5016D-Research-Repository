@@ -1,16 +1,12 @@
 # Main.py
 #
 # author: Kaoru
-# date: 09.09.23
+# date: 10.09.23
 
-# UPDATE & REVISION
-# from Menu_Display.py, using Option2 to display menu
-# consider using Option1 later stage
-import Ticket
+from Ticket import Ticket
 
 
 class Main:
-    # to start thicket number from 2001
     ticket_counter = 2000
     all_tickets = {}
 
@@ -27,14 +23,18 @@ class Main:
               sep="\n"
               )
 
-    # to make code CLEAR, define methods first and call them later
+    # to make code CLEAR, define methods first and call them upon user's menu selection
+
+    # for user to input when submitting ticket
     def add_ticket(self):
         staff_id = input("Enter your staff ID: ")
         creator_name = input("Enter your name: ")
         contact_email = input("Enter contact Email: ")
         description = input("Enter description of issue. To change password, enter 'Password Change': ")
+        # to start thicket number from 2001
         self.ticket_counter += 1
-        new_ticket = Ticket.Ticket(self.ticket_counter, staff_id, creator_name, contact_email, description)
+        new_ticket = Ticket(self.ticket_counter, staff_id, creator_name, contact_email, description)
+        # to add and store new tickets in dictionary
         self.all_tickets[new_ticket.ticket_number] = new_ticket
         if "Password Change" in description:
             new_ticket.resolve_password_change()
@@ -42,8 +42,10 @@ class Main:
             print(f"Ticket Number: {new_ticket.ticket_number}")
         else:
             print(f"Ticket Submitted Successfully! Ticket Number: {new_ticket.ticket_number}")
+        # to display stats after submitting ticket
         self.show_ticket_stats()
 
+    # to display all tickets
     def show_all_tickets(self):
         if len(self.all_tickets) > 0:
             for ticket in self.all_tickets.values():
@@ -53,6 +55,7 @@ class Main:
         else:
             print("No Tickets to show")
 
+    # exception handling to respond open and existing ticket
     def respond_ticket(self):
         try:
             ticket_number = int(input("Enter Ticket Number to Respond: "))
@@ -68,6 +71,7 @@ class Main:
             print("Wrong input. Please enter a number ... ")
         except KeyError:
             print("Ticket number not found. Please check again.")
+##ここからコメントチェック
 
     def reopen_ticket(self):
         try:

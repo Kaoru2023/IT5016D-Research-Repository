@@ -19,14 +19,18 @@ class Ticket:
         self.status = "Open"
 
     def resolve_password_change(self):
-        new_password = self.staff_id[:2] + self.creator_name[:3]
+        new_password = self.get_generated_new_password()
         self.response = f"New Password Generated: {new_password}"
         self.status = "Closed"
         Ticket.resolved_tickets += 1
         Ticket.open_tickets -= 1
 
+    def get_generated_new_password(self):
+        new_password = self.staff_id[:2] + self.creator_name[:3]
+        return new_password
+
     def ticket_info(self):
-        print(f"Ticket Number: {self.ticket_number}", #include print here? or print in Main?
+        print(f"Ticket Number: {self.ticket_number}",
               f"Ticket Creator Name: {self.creator_name}",
               f"Staff ID: {self.staff_id}",
               f"Contact Email: {self.contact_email}",
