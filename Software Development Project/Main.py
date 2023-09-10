@@ -12,7 +12,7 @@ import Ticket
 class Main:
     # to start thicket number from 2001
     ticket_counter = 2000
-    all_tickets = []
+    all_tickets = {}
 
     def print_menu(self):
         print("-----------------------------------",
@@ -35,7 +35,7 @@ class Main:
         description = input("Enter description of issue. To change password, enter 'Password Change': ")
         self.ticket_counter += 1
         new_ticket = Ticket.Ticket(self.ticket_counter, staff_id, creator_name, contact_email, description)
-        self.all_tickets.append(new_ticket)
+        self.all_tickets[new_ticket.ticket_number] = new_ticket
         if "Password Change" in description:
             new_ticket.resolve_password_change()
             print(new_ticket.response)
@@ -45,43 +45,55 @@ class Main:
         self.show_ticket_stats()
 
     def show_all_tickets(self):
-        for ticket in self.all_tickets:
-            print("-----------------------------------")
-            ticket.ticket_info()
-            print("-----------------------------------")
+        if len(self.all_tickets) > 0:
+            for ticket in self.all_tickets.values():
+                print("-----------------------------------")
+                ticket.ticket_info()
+                print("-----------------------------------")
+        else:
+            print("No Tickets to show")
 
     def respond_ticket(self):
-        ticket_number = int(input("Enter Ticket Number to Respond: "))
-        for ticket in self.all_tickets:
-            if ticket.ticket_number == ticket_number and ticket.status == "Open":
+        try:
+            ticket_number = int(input("Enter Ticket Number to Respond: "))
+            ticket = self.all_tickets[ticket_number]
+            if (ticket.ticket_number == ticket_number
+                and (ticket.status == "Open" or ticket.status == "Reopened")):
                 response = input("Enter Response: ")  # moved this from before if condition
                 ticket.resolve_ticket(response)
                 print("Response added to the ticket.")
-                break
-        else:
-            print("Ticket not found or already closed.")
+            else:
+                print("Ticket not found or already closed.")
+        except ValueError:
+            print("Wrong input. Please enter a number ... ")
+        except KeyError:
+            print("Ticket number not found. Please check again.")
 
     def reopen_ticket(self):
-        ticket_number = int(input("Enter Ticket Number to Reopen: "))
-        for ticket in self.all_tickets:
+        try:
+            ticket_number = int(input("Enter Ticket Number to Reopen: "))
+            ticket = self.all_tickets[ticket_number]
             if ticket.ticket_number == ticket_number and ticket.status == "Closed":
                 ticket.reopen_ticket()
                 print("Ticket reopened.")
-                break
-        else:
-            print("Ticket not found or not closed.")
+            else:
+                print("Ticket not found or not closed.")
+        except ValueError:
+            print("Wrong input. Please enter a number ... ")
+        except KeyError:
+            print("Ticket number not found. Please check again.")
 
     def show_ticket_stats(self):
         print("-----------------------------------")
-        if self.ticket_counter < 2001:
+        if self.ticket_counter > 2000:
+            ticket = self.all_tickets[2001]
+            ticket.ticket_stats()
+        else:
             print("Submitted Tickets: 0",
                   "Resolved Tickets: 0",
                   "Open Tickets: 0",
                   sep="\n"
                   )
-        else:
-            ticket = self.all_tickets[0]
-            ticket.ticket_stats()
 
     def exit(self):
         print("Goodbye!")

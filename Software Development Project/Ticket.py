@@ -10,7 +10,6 @@ class Ticket:
 
     def __init__(self, ticket_counter, staff_id, creator_name, contact_email, description):
         self.ticket_number = ticket_counter
-        # starting ticket number from 2001
         Ticket.open_tickets += 1
         self.staff_id = staff_id
         self.creator_name = creator_name
@@ -27,7 +26,7 @@ class Ticket:
         Ticket.open_tickets -= 1
 
     def ticket_info(self):
-        print(f"Ticket Number: {self.ticket_number}",
+        print(f"Ticket Number: {self.ticket_number}", #include print here? or print in Main?
               f"Ticket Creator Name: {self.creator_name}",
               f"Staff ID: {self.staff_id}",
               f"Contact Email: {self.contact_email}",
