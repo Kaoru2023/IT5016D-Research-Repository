@@ -1,0 +1,13 @@
+***Instructions Required to Display My Software Project***
+
+Please refer to my README file which provides instructions on how to use my Help Desk Ticketing System prototype. 
+
+Information included in my README related to usage instructions as follows:
+
+The installation process, which involves installing Python and running the program.
+
+The project structure, mentioning the two files, Main.py and Ticket.py.
+
+A detailed guide on how to use the system, including options for submitting tickets, showing all tickets, responding to tickets, reopening closed tickets, displaying statistics, and exiting the system.
+
+Examples that demonstrate how to use various features of the system.
