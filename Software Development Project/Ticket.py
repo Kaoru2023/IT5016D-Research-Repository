@@ -1,9 +1,10 @@
-# Initiate_Project.py
+# Ticket.py
 #
 # author: Kaoru
-# date: 09.09.23
+# date: 12.09.23
 
 # modify in conjunction with Main.py
+# creating Ticket class to store all ticket information
 class Ticket:
     open_tickets = 0
     resolved_tickets = 0
@@ -18,6 +19,8 @@ class Ticket:
         self.response = "Not Yet Provided"
         self.status = "Open"
 
+    # to update the ticket’s response, change status to Closed,
+    # increase the number of closed tickets and decrease the number of open tickets by 1.
     def resolve_password_change(self):
         new_password = self.get_generated_new_password()
         self.response = f"New Password Generated: {new_password}"
@@ -25,6 +28,8 @@ class Ticket:
         Ticket.resolved_tickets += 1
         Ticket.open_tickets -= 1
 
+    # to generate the new password with:
+    # The first two characters of the staffID, followed by the first three characters of the ticket creator name
     def get_generated_new_password(self):
         new_password = self.staff_id[:2] + self.creator_name[:3]
         return new_password
@@ -40,20 +45,27 @@ class Ticket:
               sep="\n"
               )
 
+    # Upon response to a ticket, change Ticket’s status to Closed,
+    # increase the number of closed tickets and decrease the number of open tickets by 1.
     def resolve_ticket(self, response):
         self.response = response
         self.status = "Closed"
         Ticket.resolved_tickets += 1
         Ticket.open_tickets -= 1
 
+    # Upon reopen a ticket, change Ticket’s status to Reopened
+    # increase the number of open tickets and decrease the number of closed tickets by 1.
     def reopen_ticket(self):
         self.status = "Reopened"
         Ticket.resolved_tickets -= 1
         Ticket.open_tickets += 1
 
-    def ticket_stats(self):
-        print(f"Submitted Tickets: {Ticket.open_tickets + Ticket.resolved_tickets}",
-              f"Resolved Tickets: {Ticket.resolved_tickets}",
-              f"Open Tickets: {Ticket.open_tickets}",
-              sep="\n"
-              )
+    # Statistics:
+    # The number of tickets submitted
+    # The number of resolved tickets
+    # The Number of open tickets
+    # A way to display those statistics to the console.
+    def get_ticket_stats(self):
+        return [Ticket.open_tickets + Ticket.resolved_tickets,
+                Ticket.resolved_tickets,
+                Ticket.open_tickets]

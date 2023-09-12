@@ -1,11 +1,13 @@
 # Main.py
 #
 # author: Kaoru
-# date: 10.09.23
+# date: 12.09.23
 
+# import Ticket to use data stored in Ticket.py
 from Ticket import Ticket
 
 
+# creating Main class to store and use information in Ticket.py
 class Main:
     ticket_counter = 2000
     all_tickets = {}
@@ -31,7 +33,7 @@ class Main:
         creator_name = input("Enter your name: ")
         contact_email = input("Enter contact Email: ")
         description = input("Enter description of issue. To change password, enter 'Password Change': ")
-        # to start thicket number from 2001
+        # to assign thicket number to new ticket, starting from 2001
         self.ticket_counter += 1
         new_ticket = Ticket(self.ticket_counter, staff_id, creator_name, contact_email, description)
         # to add and store new tickets in dictionary
@@ -41,7 +43,11 @@ class Main:
             print(new_ticket.response)
             print(f"Ticket Number: {new_ticket.ticket_number}")
         else:
-            print(f"Ticket Submitted Successfully! Ticket Number: {new_ticket.ticket_number}")
+            print("Ticket Submitted Successfully!",
+                  f"Ticket Number: {new_ticket.ticket_number}",
+                  sep="\n"
+                  )
+
         # to display stats after submitting ticket
         self.show_ticket_stats()
 
@@ -71,7 +77,6 @@ class Main:
             print("Wrong input. Please enter a number ... ")
         except KeyError:
             print("Ticket number not found. Please check again.")
-##ここからコメントチェック
 
     def reopen_ticket(self):
         try:
@@ -89,15 +94,15 @@ class Main:
 
     def show_ticket_stats(self):
         print("-----------------------------------")
+        stats = [0, 0, 0]
         if self.ticket_counter > 2000:
             ticket = self.all_tickets[2001]
-            ticket.ticket_stats()
-        else:
-            print("Submitted Tickets: 0",
-                  "Resolved Tickets: 0",
-                  "Open Tickets: 0",
-                  sep="\n"
-                  )
+            stats = ticket.get_ticket_stats()
+        print(f"Submitted Tickets: {stats[0]}",
+              f"Resolved Tickets: {stats[1]}",
+              f"Open Tickets: {stats[2]}",
+              sep="\n"
+              )
 
     def exit(self):
         print("Goodbye!")
