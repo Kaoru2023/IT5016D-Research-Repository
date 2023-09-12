@@ -36,13 +36,12 @@ Help Desk Ticketing System Menu:
 4. Reopen Closed Ticket
 5. Show Ticket Statistics
 6. Exit
----
-<br>
+
+\-----------------------------------  
+  
 To request assistance, choose Option 1. and provide required information. If you need change password, type "Change Password".<br>
-A new password and a ticket number will be displayed.
-
----
-
+A new password and a ticket number will be displayed.  
+\-----------------------------------  
 Enter your choice 1 - 6: 1  
 Enter your staff ID: K1234  
 Enter your name: Kaoru  
@@ -50,39 +49,35 @@ Enter contact Email: kaoru@gmail.com
 Enter description of issue. To change password, enter 'Password Change': Password Change  
 New Password Generated: K1Kao  
 Ticket Number: 2001  
----
-<br>
+\-----------------------------------  
+  
 If you have other issues, type description.  
-
----
+\-----------------------------------  
 Enter your choice 1 - 6: 1  
 Enter your staff ID: T3456  
 Enter your name: Taro  
 Enter contact Email: taro@gmail.com  
 Enter description of issue. To change password, enter 'Password Change': PC does not start  
 Ticket Submitted Successfully! Ticket Number: 2002  
----
-<br>
-To respond a ticket, choose Option 3. and specify the ticket number and enter message.
-
----
+\-----------------------------------  
+  
+To respond a ticket, choose Option 3. and specify the ticket number and enter message.  
+\-----------------------------------  
 Enter your choice 1 - 6: 3  
 Enter Ticket Number to Respond: 2002  
 Enter Response: Your PC issue resolved  
 Response added to the ticket.  
----
-<br>
+\-----------------------------------  
+  
 To reopen a closed ticket, choose Option 4. and specify the ticket number.  
-
----
+\-----------------------------------  
 Enter your choice 1 - 6: 4  
 Enter Ticket Number to Reopen: 2001  
 Ticket reopened.  
----
-<br>
-To see all ticket information, choose Option2.
-
----
+\-----------------------------------  
+  
+To see all ticket information, choose Option2.  
+\-----------------------------------  
 Enter your choice 1 - 6: 2  
 Ticket Number: 2001  
 Ticket Creator Name: Kaoru  
@@ -91,7 +86,7 @@ Contact Email: kaoru@gmail.com
 Description: Password Change  
 Response: New Password Generated: K1Kao  
 Status: Reopened  
----  
+\-----------------------------------    
 Ticket Number: 2002  
 Ticket Creator Name: Taro  
 Staff ID: T3456  
@@ -99,16 +94,15 @@ Contact Email: taro@gmail.com
 Description: PC does not start  
 Response: Your PC issue resolved  
 Status: Closed  
----
-<br>
-To display ticket stats, choose Option 5.
-
------------------------------------
+\-----------------------------------  
+  
+To display ticket stats, choose Option 5.  
+\-----------------------------------  
 Enter your choice 1 - 6: 5    
 Submitted Tickets: 2  
 Resolved Tickets: 1  
 Open Tickets: 1  
------------------------------------
+\-----------------------------------  
 
 ## Requirements
 
