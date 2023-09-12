@@ -29,8 +29,6 @@ Enter an option from the Help desk Ticketing System Menu:
 "Option 6: Exit": Close the system. 
 
 ## Examples
-To request assistance, choose Option 1. and provide required information. If you need change password, type "Change Password". A new password and a ticket number will be displayed.
-
 Help Desk Ticketing System Menu:
 1. Submit New Ticket
 2. Show All Tickets
@@ -38,7 +36,13 @@ Help Desk Ticketing System Menu:
 4. Reopen Closed Ticket
 5. Show Ticket Statistics
 6. Exit
------------------------------------
+---
+<br>
+To request assistance, choose Option 1. and provide required information. If you need change password, type "Change Password".<br>
+A new password and a ticket number will be displayed.
+
+---
+
 Enter your choice 1 - 6: 1  
 Enter your staff ID: K1234  
 Enter your name: Kaoru  
@@ -46,36 +50,39 @@ Enter contact Email: kaoru@gmail.com
 Enter description of issue. To change password, enter 'Password Change': Password Change  
 New Password Generated: K1Kao  
 Ticket Number: 2001  
------------------------------------
-   
-<span style="font-size: 14px;">If you have other issues, type description.</span>
------------------------------------
+---
+<br>
+If you have other issues, type description.  
+
+---
 Enter your choice 1 - 6: 1  
 Enter your staff ID: T3456  
 Enter your name: Taro  
 Enter contact Email: taro@gmail.com  
 Enter description of issue. To change password, enter 'Password Change': PC does not start  
 Ticket Submitted Successfully! Ticket Number: 2002  
------------------------------------
+---
+<br>
+To respond a ticket, choose Option 3. and specify the ticket number and enter message.
 
-<span style="font-size: 14px;">To respond a ticket, choose Option 3. and specify the ticket number and enter message.</span>
------------------------------------
+---
 Enter your choice 1 - 6: 3  
 Enter Ticket Number to Respond: 2002  
 Enter Response: Your PC issue resolved  
 Response added to the ticket.  
------------------------------------
+---
+<br>
+To reopen a closed ticket, choose Option 4. and specify the ticket number.  
 
-<span style="font-size: 14px;">To reopen a closed ticket, choose Option 4. and specify the ticket number.</span>
------------------------------------
+---
 Enter your choice 1 - 6: 4  
 Enter Ticket Number to Reopen: 2001  
 Ticket reopened.  
------------------------------------
+---
+<br>
+To see all ticket information, choose Option2.
 
-
-<span style="font-size: 14px;">To see all ticket information, choose Option2.</span>
------------------------------------
+---
 Enter your choice 1 - 6: 2  
 Ticket Number: 2001  
 Ticket Creator Name: Kaoru  
@@ -84,7 +91,7 @@ Contact Email: kaoru@gmail.com
 Description: Password Change  
 Response: New Password Generated: K1Kao  
 Status: Reopened  
------------------------------------  
+---  
 Ticket Number: 2002  
 Ticket Creator Name: Taro  
 Staff ID: T3456  
@@ -92,9 +99,10 @@ Contact Email: taro@gmail.com
 Description: PC does not start  
 Response: Your PC issue resolved  
 Status: Closed  
------------------------------------
+---
+<br>
+To display ticket stats, choose Option 5.
 
-<span style="font-size: 14px;">To display ticket stats, choose Option 5.</span>
 -----------------------------------
 Enter your choice 1 - 6: 5    
 Submitted Tickets: 2  
