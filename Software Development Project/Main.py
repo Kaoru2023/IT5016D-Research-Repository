@@ -38,16 +38,12 @@ class Main:
         new_ticket = Ticket(self.ticket_counter, staff_id, creator_name, contact_email, description)
         # to add and store new tickets in dictionary
         self.all_tickets[new_ticket.ticket_number] = new_ticket
+        print(f"Ticket Number: {new_ticket.ticket_number}")
         if "Password Change" in description:
             new_ticket.resolve_password_change()
             print(new_ticket.response)
-            print(f"Ticket Number: {new_ticket.ticket_number}")
         else:
-            print("Ticket Submitted Successfully!",
-                  f"Ticket Number: {new_ticket.ticket_number}",
-                  sep="\n"
-                  )
-
+            print("Ticket Submitted Successfully!")
         # to display stats after submitting ticket
         self.show_ticket_stats()
 
@@ -68,7 +64,7 @@ class Main:
             ticket = self.all_tickets[ticket_number]
             if (ticket.ticket_number == ticket_number
                 and (ticket.status == "Open" or ticket.status == "Reopened")):
-                response = input("Enter Response: ")  # moved this from before if condition
+                response = input("Enter Response: ")
                 ticket.resolve_ticket(response)
                 print("Response added to the ticket.")
             else:
@@ -108,8 +104,8 @@ class Main:
         print("Goodbye!")
 
     def main(self):
-        # to print the menu, use the infinite loop, then ask user to choose an option
-        # to make the code clearer and easier to understand, use the function"print_menu"
+        # to print the menu, asking user to choose an option (use loop with break)
+        # to make the code clearer and easier to understand, use the function "print_menu"
         # to print the menu
         while True:
             self.print_menu()

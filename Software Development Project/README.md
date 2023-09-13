@@ -47,8 +47,8 @@ Enter your staff ID: K1234
 Enter your name: Kaoru  
 Enter contact Email: kaoru@gmail.com  
 Enter description of issue. To change password, enter 'Password Change': Password Change  
-New Password Generated: K1Kao  
 Ticket Number: 2001  
+New Password Generated: K1Kao  
 \-----------------------------------  
   
 If you have other issues, type description.  
@@ -58,7 +58,8 @@ Enter your staff ID: T3456
 Enter your name: Taro  
 Enter contact Email: taro@gmail.com  
 Enter description of issue. To change password, enter 'Password Change': PC does not start  
-Ticket Submitted Successfully! Ticket Number: 2002  
+Ticket Number: 2002  
+Ticket Submitted Successfully!     
 \-----------------------------------  
   
 To respond a ticket, choose Option 3. and specify the ticket number and enter message.  
