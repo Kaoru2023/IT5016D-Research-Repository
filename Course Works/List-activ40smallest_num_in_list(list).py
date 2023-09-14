@@ -3,7 +3,8 @@
 # author: Kaoru
 # date: 17.08.23
 
-list_2 = [ 1,19, 4, 8 ]
+list_2 = [1, 19, 4, 8]
+
 
 # fetching smallest number in list
 def smallest_num_in_list(list):
@@ -12,6 +13,8 @@ def smallest_num_in_list(list):
         if a < min:
             min = a
     return min
+
+
 print(smallest_num_in_list(list_2))
 
 
@@ -22,5 +25,6 @@ def largest_num_in_list(list):
         if a > max:
             max = a
     return max
+
+
 print(largest_num_in_list(list_2))
-    
