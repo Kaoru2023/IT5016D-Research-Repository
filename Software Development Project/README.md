@@ -16,7 +16,7 @@ Ticket.py : Stores tickets information and perform required tasks.
 ## How to Use the System
 Enter an option from the Help desk Ticketing System Menu:
 
-"Option 1: Submit New Ticket": Choose this option to request assistance. Provide your staffID, name, contact email, and description of the isssue. If you need password change, enter "Password Change" in the description. A New Password will be generated. After submitting a new ticket, a ticket number will be assigned. 
+"Option 1: Submit New Ticket": Choose this option to request assistance. Provide your staffID, name, contact email, and description of the isssue. If you need password change, enter "Password Change" in the description. A New Password will be generated. After submitting a new ticket, a ticket number will be assigned and ticket statistics will be displayed.
 
 "Option 2: Show All Tickets": Display a list of all tickets with information, including staff ID, creator’s name, contact email address, description of issue, response, and ticket status.
 
