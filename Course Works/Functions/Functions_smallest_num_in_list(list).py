@@ -1,4 +1,4 @@
-# List-activ40smallest_num_in_list(list).py
+# Functions_smallest_num_in_list(list).py
 #
 # author: Kaoru
 # date: 17.08.23

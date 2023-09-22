@@ -4,7 +4,8 @@
 # date: 24.08.23
 
 '''
-This task is repeated from earlier in the course. Write more concise code using a function with
+This task is repeated from earlier in the course, if-else statement.
+Write more concise code using a function with
 a return statement.
 A parking meter charges $4 for the first 2 hours, then $3 for every hour thereafter.
 Write a program that displays a welcome message and instructions, then prompts the user for
@@ -27,6 +28,8 @@ def get_park_charge(hours):
         return cost
     else:
         return rate * hours
+
+
 # assert - print 8
 print(get_park_charge(2))
 

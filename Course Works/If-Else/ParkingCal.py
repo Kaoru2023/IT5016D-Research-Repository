@@ -3,6 +3,8 @@
 # autor: Kaoru
 # 10.08.23
 
+# for improved version, see Improved Programs
+
 print("Kis Ora. This is a parking meter.")
 park_time = 6
 print("park time is", park_time, "hours.")

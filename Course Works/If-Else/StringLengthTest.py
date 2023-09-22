@@ -5,7 +5,7 @@
 
 # This is to check the length of user password
 # set to string version
-input_password = str(input("Please enter passward: "))
+input_password = str(input("Please enter password: "))
 if len(input_password) < 6:
     print("characters needs to be at least 6")
 else:
@@ -14,7 +14,7 @@ else:
 # raw_input version
 # did not work in Python 3
 # error name, 'raw_input' is not defined
-# input_passward = raw_input("Please enter passward\n")
+# input_password = raw_input("Please enter password\n")
 # if len(input_password) < 10:
 #    print("characters needs to be at least 10")
 # else:

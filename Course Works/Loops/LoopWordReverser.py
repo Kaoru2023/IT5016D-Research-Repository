@@ -8,11 +8,10 @@ print("Welcome to word reverser!\n")
 # assertion input "abcdefghijklmnop", then output "omkigeca"
 word = input("Input a word to reverse: ")
 
-for char in range(len(word) -1, -1, -1):
+for char in range(len(word) - 1, -1, -1):
     print(word[char], end="")
 print("\n")
 
-for char in range(len(word) -2, -2, -2):
+for char in range(len(word) - 2, -2, -2):
     print(word[char], end="")
 print("\n")
-
