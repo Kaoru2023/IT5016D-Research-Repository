@@ -11,8 +11,6 @@ Navigate my neatly organised coding expedition directory, where you'll find fold
 
 ## Code Collections
 
-### Course Modules
-
 In this section, you'll discover code pieces, tied to the modules and the ones that inspired me throughout of my learning journey.
 
 ### Exploring A Bit...
