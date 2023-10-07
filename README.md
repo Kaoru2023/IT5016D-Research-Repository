@@ -1,4 +1,4 @@
-# Research Repository
+# IT5016D Research Repository
 
 ## Introduction
 
@@ -10,8 +10,6 @@ Join me as I embark on Python programming in this repository, reflecting my codi
 Navigate my neatly organised coding expedition directory, where you'll find folders for various modules and topics.
 
 ## Code Collections
-
-### Course Modules
 
 In this section, you'll discover code pieces, tied to the modules and the ones that inspired me throughout of my learning journey.
 
@@ -29,7 +27,7 @@ Click a folder name to see its contents. To view the contents of a code file, cl
   
 ### Cloning the Repository  
 1. Clone the repository to your local machine using the following command:  
-git clone https://github.com/Kaoru2023/Research-Repository  
+git clone https://github.com/Kaoru2023/IT5016D-Research-Repository  
 2. Ensure Python(Python3.x is recommended) installed on your machine.  
 3. Open a terminal or command prompt and navigate to the cloned repository's directory.  
 4. Run the Python program by executing the folloing command:  
@@ -45,7 +43,7 @@ python (the name of a file you want to run).py
 
 ## Contact
 
-GitHub: Kaoru2023  https://github.com/Kaoru2023/Research-Repository       
+GitHub: Kaoru2023  https://github.com/Kaoru2023/IT5016D-Research-Repository       
     
 
  
