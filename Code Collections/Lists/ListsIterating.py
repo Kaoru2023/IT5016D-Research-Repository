@@ -8,7 +8,7 @@
 sample_list = [1,4,5,2,9,12]
 
 for i in sample_list:
-    print("An i in the sample listt is ", i)
+    print("An i in the sample list is ", i)
 
 # using the enumerate function to get the index and the item
 for index, i in enumerate(sample_list):

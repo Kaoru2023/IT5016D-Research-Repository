@@ -65,7 +65,8 @@ class Ticket:
     # The number of resolved tickets
     # The Number of open tickets
     # A way to display those statistics to the console.
-    def get_ticket_stats(self):
+    @staticmethod
+    def get_ticket_stats():
         return [Ticket.open_tickets + Ticket.resolved_tickets,
                 Ticket.resolved_tickets,
                 Ticket.open_tickets]

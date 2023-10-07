@@ -12,6 +12,7 @@ class Main:
     ticket_counter = 2000
     all_tickets = {}
 
+    @staticmethod
     def print_menu(self):
         print("-----------------------------------",
               "Help Desk Ticketing System Menu:",
@@ -63,7 +64,7 @@ class Main:
             ticket_number = int(input("Enter Ticket Number to Respond: "))
             ticket = self.all_tickets[ticket_number]
             if (ticket.ticket_number == ticket_number
-                and (ticket.status == "Open" or ticket.status == "Reopened")):
+                    and (ticket.status == "Open" or ticket.status == "Reopened")):
                 response = input("Enter Response: ")
                 ticket.resolve_ticket(response)
                 print("Response added to the ticket.")
@@ -100,6 +101,7 @@ class Main:
               sep="\n"
               )
 
+    @staticmethod
     def exit(self):
         print("Goodbye!")
 
@@ -108,7 +110,7 @@ class Main:
         # to make the code clearer and easier to understand, use the function "print_menu"
         # to print the menu
         while True:
-            self.print_menu()
+            self.print_menu(self)
             # to create ROBUST CODE, use EXCEPTION HANDLING
             try:
                 option = int(input("Enter your choice 1 - 6: "))
